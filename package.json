@@ -1,0 +1,24 @@
+{
+  "name": "botconnector-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kou-ishizaki/botconnector-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kou-ishizaki/botconnector-sample/issues"
+  },
+  "homepage": "https://github.com/kou-ishizaki/botconnector-sample#readme",
+  "dependencies": {
+    "botbuilder": "^3.0.0",
+    "restify": "^4.1.1"
+  }
+}
