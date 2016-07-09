@@ -11,7 +11,7 @@ bot.add('/', function (session) {
  
 // Setup Restify Server
 var server = restify.createServer();
-server.post('/api/messages', bot.verifyBotFramework(), bot.listen());
+server.post('/v1/messages', bot.verifyBotFramework(), bot.listen());
 server.listen(port, function () {
    console.log('%s listening to %s', server.name, server.url); 
 });
