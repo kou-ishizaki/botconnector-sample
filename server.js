@@ -11,6 +11,11 @@ var dialog = new builder.CommandDialog();
 dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは');
 });
+
+dialog.matches(['お腹すいた'], function (session) {
+session.send('お好み焼きをどうぞ!!');
+});
+
 bot.add('/', dialog);
 
 //bot.add('/', function (session) {
