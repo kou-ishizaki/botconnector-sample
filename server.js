@@ -13,7 +13,7 @@ session.send('こんにちは');
 });
 
 dialog.matches(['お腹すいた'], function (session) {
-session.send('お好み焼きをどうぞ!!');
+session.send('八昌のお好み焼きをどうぞ!!　http://tabelog.com/hiroshima/A3401/A340101/34000100/');
 });
 
 bot.add('/', dialog);
