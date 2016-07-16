@@ -16,6 +16,10 @@ dialog.matches(['お腹すいた'], function (session) {
 session.send('八昌のお好み焼きをどうぞ!!　http://tabelog.com/hiroshima/A3401/A340101/34000100/');
 });
 
+dialog.matches(['オリンピック会場について教えて', '会場について'], function (session) {
+session.send('<a href="http://2020tokyo2020.com/jp/olympic/stadium.html">こちら</a>をご覧ください ');
+});
+
 bot.add('/', dialog);
 
 //bot.add('/', function (session) {
