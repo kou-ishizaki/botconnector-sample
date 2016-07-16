@@ -17,7 +17,7 @@ session.send('八昌のお好み焼きをどうぞ!!　http://tabelog.com/hirosh
 });
 
 dialog.matches(['オリンピック会場について教えて', '会場について'], function (session) {
-session.send('&lt;a href=&quot;http://2020tokyo2020.com/jp/olympic/stadium.html&quot;&gt;こちら&lt;/a&gt;をご覧ください ');
+session.send(<a href="http://2020tokyo2020.com/jp/olympic/stadium.html">こちら</a>をご覧ください ');
 });
 
 bot.add('/', dialog);
