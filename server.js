@@ -12,6 +12,10 @@ dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは');
 });
 
+dialog.matches(['たすけて欲しいんだけど'], function (session) {
+session.send('何についてにゃん？','1.お腹が空いたよ!!','2.遊びたいよ!!','3.疲れたよ!!');
+});
+
 dialog.matches(['お腹すいた'], function (session) {
 session.send('八昌のお好み焼きをどうぞ!!　http://tabelog.com/hiroshima/A3401/A340101/34000100/');
 });
