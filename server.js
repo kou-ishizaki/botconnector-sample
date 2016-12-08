@@ -12,8 +12,12 @@ dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは');
 });
 
-dialog.matches(['たすけて欲しいんだけど'], function (session) {
-session.send('何についてにゃん？','1.お腹が空いたよ!!','2.遊びたいよ!!','3.疲れたよ!!');
+dialog.matches(['あなた誰？'], function (session) {
+session.send('見てのとおり みきゃんだよ〜!!!');
+});
+
+dialog.matches(['困ってるんだけど'], function (session) {
+session.send('何についてにゃん？');
 });
 
 dialog.matches(['お腹すいた'], function (session) {
