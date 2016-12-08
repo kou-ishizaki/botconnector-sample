@@ -4,7 +4,7 @@ var builder = require('botbuilder');
 var port = process.env.PORT || 8080;
  
 // Create bot and add dialogs
-var bot = new builder.BotConnectorBot({ appId: 'ffdf8cfa-5648-4055-bf00-955852fcc088', appSecret: '50saqFgDmP7yR1a7sL9E0Vs' });
+var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a', appSecret: 'yyDzwKftgbNmzGsrYCP4GPV' });
 
 var dialog = new builder.CommandDialog();
 
