@@ -17,15 +17,15 @@ session.send('ほたら、何について知りたいの〜\n 1.お腹すいた\
 });
 
 dialog.matches(['1'], function (session) {
-session.send('ほしたら、何が食べたいの〜？？ 1.普通 2.さっぱり 3.がっつり 4.ならでは 5.みきゃんのおススメ');
+session.send('ほしたら、何が食べたいの〜？？\n 1.普通\n 2.さっぱり\n 3.がっつり\n 4.ならでは\n 5.みきゃんのおススメ\n');
 });
 
 dialog.matches(['3'], function (session) {
-session.send('ほなら、ここがおススメよ〜 https://goo.gl/CquU3d');
+session.send('ほなら、ここがおススメよ〜\n https://goo.gl/CquU3d');
 });
 
 dialog.matches(['2'], function (session) {
-session.send('ほなら、この公園とかおススメよ〜');
+session.send('ほなら、この公園とかおススメよ〜\n https://goo.gl/FW8kM2');
 });
 
 
