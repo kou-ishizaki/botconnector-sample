@@ -13,7 +13,7 @@ session.send('こんにちは!! 今日はいい天気なもし♪');
 });
 
 dialog.matches(['教えてみきゃん!!','もう1回教えてみきゃん!!'], function (session) {
-session.send('ほたら、何について知りたいの〜\n 1.お腹すいた\n 2.遊びたい\n 3.休憩したい\n 4.トイレに行きたい\n 5.この後の天気');
+session.send('ほたら、何について知りたいの〜' +'\n'+ '1.お腹すいた\n 2.遊びたい\n 3.休憩したい\n 4.トイレに行きたい\n 5.この後の天気');
 });
 
 dialog.matches(['1'], function (session) {
