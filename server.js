@@ -21,7 +21,7 @@ session.send('ほしたら、何が食べたいの〜？？ 1.普通 2.さっぱ
 });
 
 dialog.matches(['3'], function (session) {
-session.send('ほなら、ここがおススメよ〜');
+session.send('ほなら、ここがおススメよ〜 https://goo.gl/CquU3d');
 });
 
 dialog.matches(['2'], function (session) {
