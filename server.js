@@ -12,12 +12,12 @@ dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気なもし♪');
 });
 
-dialog.matches(['教えてみきゃん!!','もう1回教えてみきゃん!!'], function (session) {
-session.send('ほたら、何について知りたいの〜' +'\n'+ '1.お腹すいた\n 2.遊びたい\n 3.休憩したい\n 4.トイレに行きたい\n 5.この後の天気');
+dialog.matches(['この近くの情報を教えてみきゃん!!','もう1回教えてみきゃん!!'], function (session) {
+session.send('ほたら、何について知りたいの〜' +'¥\n'+ '1.お腹すいた 2.遊びたい 3.休憩したい 4.トイレに行きたい 5.この後の天気');
 });
 
 dialog.matches(['1'], function (session) {
-session.send('ほしたら、何が食べたいの〜？？ 1.普通 2.さっぱり 3.がっつり 4.ならでは 5.みきゃんのおススメ');
+session.send('ほしたら、何が食べたいの〜？？ ' +'¥\n'+ '1.普通 2.さっぱり 3.がっつり 4.ならでは 5.みきゃんのおススメ');
 });
 
 dialog.matches(['3'], function (session) {
