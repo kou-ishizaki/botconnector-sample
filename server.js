@@ -32,6 +32,10 @@ dialog.matches(['6'], function (session) {
 session.send('ほなら、湯めぐりサイクル　ゆっクル♪\n https://goo.gl/fEIQT0');
 });
 
+dialog.matches(['5'], function (session) {
+session.send('向島町の天気ならコチラ\n https://goo.gl/VAjcD7');
+});
+
 
 bot.add('/', dialog);
 
