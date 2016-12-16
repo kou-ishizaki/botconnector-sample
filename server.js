@@ -22,7 +22,7 @@ var intents = new builder.IntentDialog({
 //=========================================================
 
 // 初期ダイアログを、intentDialogとして使用する
-bot.dialog('/', intents);
+//bot.dialog('/', intents);
 
 // インテントと処理の結びつけ
 /*intents
