@@ -16,7 +16,36 @@ var recognizer = new builder.LuisRecognizer('https://api.projectoxford.ai/luis/v
 var intents = new builder.IntentDialog({
   recognizers: [recognizer]
 });
+
+//=========================================================
+// 会話の処理
+//=========================================================
+
+// 初期ダイアログを、intentDialogとして使用する
+bot.dialog('/', intents);
+
+// インテントと処理の結びつけ
+intents
+    .matches('getWeather', function (session, args) {
+
+        // インテントが 'intentA' だったときの処理をここに記述します。
+        session.send('getWeather!! だよ');
+
+    })
+    .matches('verifyWeather', function (session, args) {
+
+        // インテントが 'intentB' だったときの処理をここに記述します。
+        session.send('verifyWeather!! だよ');
+
+    })
+
+
+
 // <Add1 1216 End>
+
+
+
+
 
 
 dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
