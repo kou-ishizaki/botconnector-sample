@@ -4,7 +4,21 @@ var builder = require('botbuilder');
 var port = process.env.PORT || 8080;
  
 // Create bot and add dialogs
-var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a', appSecret: 'yyDzwKftgbNmzGsrYCP4GPV' });
+//var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a', appSecret: 'yyDzwKftgbNmzGsrYCP4GPV' });
+
+// ボットの接続先設定
+var connector = new builder.ChatConnector({
+  // MicrosoftBotFrameworkで取得した、IDとパスワードを入力します
+  appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a',
+  appPassword: 'yyDzwKftgbNmzGsrYCP4GPV'
+});
+
+// ボットの仕組みを提供してくれるUniversalBotオブジェクトを作成
+var bot = new builder.UniversalBot(connector, {
+  // エラーメッセージの初期設定を変更
+  dialogErrorMessage: "すみません。学習不足で認識できません。(T_T)"
+});
+
 
 var dialog = new builder.CommandDialog();
 
