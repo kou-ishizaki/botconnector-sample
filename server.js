@@ -4,63 +4,9 @@ var builder = require('botbuilder');
 var port = process.env.PORT || 8080;
  
 // Create bot and add dialogs
-//var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a', appSecret: 'yyDzwKftgbNmzGsrYCP4GPV' });
+var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a', appSecret: 'yyDzwKftgbNmzGsrYCP4GPV' });
 
-// ボットの接続先設定
-var connector = new builder.ChatConnector({
-  // MicrosoftBotFrameworkで取得した、IDとパスワードを入力します
-  appId: 'dbab687a-7315-40f6-a71b-63b63e3f159a',
-  appPassword: 'yyDzwKftgbNmzGsrYCP4GPV'
-});
-
-// ボットの仕組みを提供してくれるUniversalBotオブジェクトを作成
-var bot = new builder.UniversalBot(connector, {
-  // エラーメッセージの初期設定を変更
-  dialogErrorMessage: "すみません。学習不足で認識できません。(T_T)"
-});
-
-
-//var dialog = new builder.CommandDialog();
-
-// <Add1 1216 Start>
-// 認識に指定するLUIS APIのURLを指定
-var recognizer = new builder.LuisRecognizer('https://api.projectoxford.ai/luis/v2.0/apps/ed81de53-5293-4f9e-acbb-41f678f4633a?subscription-key=3111f6e1c29d4036b49841e765412611&verbose=true');
-
-// IntentDialogオブジェクトを作成
-var intents = new builder.IntentDialog({
-  recognizers: [recognizer]
-});
-
-//=========================================================
-// 会話の処理
-//=========================================================
-
-// 初期ダイアログを、intentDialogとして使用する
-//bot.dialog('/', intents);
-
-// インテントと処理の結びつけ
-/*intents
-    .matches('getWeather', function (session, args) {
-
-        // インテントが 'intentA' だったときの処理をここに記述します。
-        session.send('getWeather!! だよ');
-
-    })
-    .matches('verifyWeather', function (session, args) {
-
-        // インテントが 'intentB' だったときの処理をここに記述します。
-        session.send('verifyWeather!! だよ');
-
-    })
-*/
-
-
-// <Add1 1216 End>
-
-
-
-
-
+var dialog = new builder.CommandDialog();
 
 dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気なもし♪');
