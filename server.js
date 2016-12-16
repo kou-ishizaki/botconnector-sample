@@ -25,7 +25,7 @@ var intents = new builder.IntentDialog({
 bot.dialog('/', intents);
 
 // インテントと処理の結びつけ
-intents
+/*intents
     .matches('getWeather', function (session, args) {
 
         // インテントが 'intentA' だったときの処理をここに記述します。
@@ -38,7 +38,7 @@ intents
         session.send('verifyWeather!! だよ');
 
     })
-
+*/
 
 
 // <Add1 1216 End>
