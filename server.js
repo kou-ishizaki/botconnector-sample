@@ -8,6 +8,17 @@ var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f
 
 var dialog = new builder.CommandDialog();
 
+// <Add1 1216 Start>
+// 認識に指定するLUIS APIのURLを指定
+var recognizer = new builder.LuisRecognizer('https://api.projectoxford.ai/luis/v2.0/apps/ed81de53-5293-4f9e-acbb-41f678f4633a?subscription-key=3111f6e1c29d4036b49841e765412611&verbose=true');
+
+// IntentDialogオブジェクトを作成
+var intents = new builder.IntentDialog({
+  recognizers: [recognizer]
+});
+// <Add1 1216 End>
+
+
 dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気なもし♪');
 });
