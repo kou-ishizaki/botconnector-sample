@@ -20,7 +20,7 @@ var bot = new builder.UniversalBot(connector, {
 });
 
 
-var dialog = new builder.CommandDialog();
+//var dialog = new builder.CommandDialog();
 
 // <Add1 1216 Start>
 // 認識に指定するLUIS APIのURLを指定
