@@ -12,10 +12,19 @@ dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気なもし♪');
 });
 
-dialog.matches(['因島のオススメを教えてよ'], function (session) {
-session.send('ほたら、何について知りたいの〜\n 1.お腹すいた\n 2.休憩したい\n 3.遊びたい\n 4.トイレに行きたい\n 5.この後の天気\n 6.やっぱり温泉♪');
+//******因島観光とは
+
+dialog.matches(['向島へ遊びに行きたいんだけど'], function (session) {
+session.send('ほたら、どれぐらいの時間有るの〜\n 1.数時間だよ\n 2.しまなみ海道走りたい\n 3.よく分かんないや');
 });
 
+dialog.matches(['1'], function (session) {
+session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!');
+});
+
+
+
+/*
 dialog.matches(['1'], function (session) {
 session.send('ほしたら、何が食べたいの〜？？\n 1.普通\n 2.さっぱり\n 3.がっつり\n 4.ならでは\n 5.みきゃんのおススメ\n');
 });
@@ -35,9 +44,10 @@ session.send('ほなら、湯めぐりサイクル　ゆっクル♪\n https://g
 dialog.matches(['5'], function (session) {
 session.send('向島町の天気ならコチラ\n https://goo.gl/VAjcD7');
 });
-
+*/
 
 bot.add('/', dialog);
+
 
 //bot.add('/', function (session) {
 
