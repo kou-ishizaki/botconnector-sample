@@ -14,7 +14,7 @@ session.send('こんにちは!! 今日はいい天気なもし♪');
 
 //******因島観光とは
 
-dialog.matches(['向島へ遊びに行きたいんだけど'], function (session) {
+dialog.matches(['今から遊びに行けるところある？'], function (session) {
 session.send('ほたら、どれぐらいの時間有るの〜\n 1.数時間だよ\n 2.しまなみ海道走りたい\n 3.よく分かんないや');
 });
 
