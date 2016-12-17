@@ -12,7 +12,7 @@ dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気なもし♪');
 });
 
-dialog.matches(['この近くの情報を教えてみきゃん!!','もう1回教えてみきゃん!!'], function (session) {
+dialog.matches(['因島のオススメを教えてよ!!'], function (session) {
 session.send('ほたら、何について知りたいの〜\n 1.お腹すいた\n 2.休憩したい\n 3.遊びたい\n 4.トイレに行きたい\n 5.この後の天気\n 6.やっぱり温泉♪');
 });
 
