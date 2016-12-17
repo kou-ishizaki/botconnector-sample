@@ -19,7 +19,7 @@ session.send('ほたら、どれぐらいの時間有るの〜\n 1.数時間だ�
 });
 
 dialog.matches(['1'], function (session) {
-session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!');
+session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/0SXCIM');
 });
 
 
