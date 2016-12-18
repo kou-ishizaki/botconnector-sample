@@ -18,7 +18,7 @@ dialog.matches(['Hi'], function (session) {
 session.send('Welcome to Onomichi');
 });
 
-//******因島観光とは
+//******因島観光とは(JP)
 
 dialog.matches(['今から遊びに行けるところある？'], function (session) {
 session.send('ほたら、どれぐらいの時間有るの〜\n 1.数時間だよ\n 2.しまなみ海道走りたい\n 3.よく分かんないや');
@@ -28,6 +28,15 @@ dialog.matches(['1'], function (session) {
 session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/0SXCIM');
 });
 
+//******因島観光とは(EN)
+
+dialog.matches(['Is there a place to go for fun from now?'], function (session) {
+session.send('mmm、How much time do you have?\n a.It''s a few hours.\n b.I want to run Shimanami Kaido\n c.Well, I do not know.');
+});
+
+dialog.matches(['a'], function (session) {
+session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/0SXCIM');
+});
 
 
 /*
