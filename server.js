@@ -18,6 +18,14 @@ dialog.matches(['Hi'], function (session) {
 session.send('Welcome to Onomichi');
 });
 
+dialog.matches(['ラーメン食べたいな'], function (session) {
+session.send('太るよ');
+});
+
+dialog.matches(['I want to eat ramen'], function (session) {
+session.send('fat....');
+});
+
 //******因島観光とは(JP)
 
 dialog.matches(['今から遊びに行けるところある？'], function (session) {
@@ -35,7 +43,7 @@ session.send('mmm、How much time do you have?\n a.Its a few hours.\n b.I want t
 });
 
 dialog.matches(['a'], function (session) {
-session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/ku9adP');
+session.send('Well、Encounter MAP" is recommended from the ferry departure from Onomichi ferry!!\n https://goo.gl/ku9adP');
 });
 
 
