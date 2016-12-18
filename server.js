@@ -31,11 +31,11 @@ session.send('じゃあ、尾道渡船フェリーのりばから「てくてく
 //******因島観光とは(EN)
 
 dialog.matches(['Is there a place to go for fun from now?'], function (session) {
-session.send('mmm、How much time do you have?\n a.It''s a few hours.\n b.I want to run Shimanami Kaido\n c.Well, I do not know.');
+session.send('mmm、How much time do you have?\n a.Its a few hours.\n b.I want to run Shimanami Kaido\n c.Well, I do not know.');
 });
 
 dialog.matches(['a'], function (session) {
-session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/0SXCIM');
+session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/ku9adP');
 });
 
 
