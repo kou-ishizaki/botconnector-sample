@@ -8,8 +8,14 @@ var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f
 
 var dialog = new builder.CommandDialog();
 
-dialog.matches(['Hi', 'Hello', 'こんにちは'], function (session) {
-session.send('こんにちは!! 今日はいい天気なもし♪');
+//******通常のやりとり
+
+dialog.matches(['こんにちは'], function (session) {
+session.send('こんにちは!! 今日はいい天気だね♪\n ようこそ尾道へ');
+});
+
+dialog.matches(['Hi'], function (session) {
+session.send('Welcome to Onomichi');
 });
 
 //******因島観光とは
