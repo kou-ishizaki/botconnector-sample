@@ -33,13 +33,13 @@ intents
 
         // インテントが 'intentA' だったときの処理をここに記述します。
 
-    })
+    });
 intents
     .matches('intentB', function (session, args) {
 
         // インテントが 'intentB' だったときの処理をここに記述します。
 
-    })
+    });
 
 
 //******通常のやりとり
