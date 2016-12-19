@@ -44,7 +44,7 @@ intents
 */
 
 //******通常のやりとり
-
+/*
 dialog.matches(['こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気だね♪\n ようこそ尾道へ');
 });
