@@ -26,10 +26,10 @@ var intents = new builder.IntentDialog({
 //=========================================================
 
 // 初期ダイアログを、intentDialogとして使用する
-bot.dialog('/', intents);
+/*bot.dialog('/', intents);
 
 // インテントと処理の結びつけ
-/*intents
+intents
     .matches('intentA', function (session, args) {
 
         // インテントが 'intentA' だったときの処理をここに記述します。
@@ -44,7 +44,7 @@ intents
 */
 
 //******通常のやりとり
-/*
+
 dialog.matches(['こんにちは'], function (session) {
 session.send('こんにちは!! 今日はいい天気だね♪\n ようこそ尾道へ');
 });
