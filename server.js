@@ -8,6 +8,40 @@ var bot = new builder.BotConnectorBot({ appId: 'dbab687a-7315-40f6-a71b-63b63e3f
 
 var dialog = new builder.CommandDialog();
 
+//=========================================================
+// IntentDialogオブジェクトの用意
+//=========================================================
+
+// 認識に指定するLUIS APIのURLを指定
+var recognizer = new builder.LuisRecognizer('https://api.projectoxford.ai/luis/v2.0/apps/ed81de53-5293-4f9e-acbb-41f678f4633a?subscription-key=3111f6e1c29d4036b49841e765412611&verbose=true
+');
+
+// IntentDialogオブジェクトを作成
+var intents = new builder.IntentDialog({
+  recognizers: [recognizer]
+});
+
+//=========================================================
+// 会話の処理
+//=========================================================
+
+// 初期ダイアログを、intentDialogとして使用する
+bot.dialog('/', intents);
+
+// インテントと処理の結びつけ
+intents
+    .matches('intentA', function (session, args) {
+
+        // インテントが 'intentA' だったときの処理をここに記述します。
+
+    })
+    .matches('intentB', function (session, args) {
+
+        // インテントが 'intentB' だったときの処理をここに記述します。
+
+    })
+
+
 //******通常のやりとり
 
 dialog.matches(['こんにちは'], function (session) {
@@ -26,7 +60,7 @@ dialog.matches(['I want to eat ramen'], function (session) {
 session.send('fat....');
 });
 
-//******因島観光とは(JP)
+//******向島観光とは(JP)
 
 dialog.matches(['今から遊びに行けるところある？'], function (session) {
 session.send('ほたら、どれぐらいの時間有るの〜\n 1.数時間だよ\n 2.しまなみ海道走りたい\n 3.よく分かんないや');
@@ -36,7 +70,7 @@ dialog.matches(['1'], function (session) {
 session.send('じゃあ、尾道渡船フェリーのりばから「てくてくMAP」がオススメだよ!!\n https://goo.gl/0SXCIM');
 });
 
-//******因島観光とは(EN)
+//******向島観光とは(EN)
 
 dialog.matches(['Is there a place to go for fun from now?'], function (session) {
 session.send('mmm、How much time do you have?\n a.Its a few hours.\n b.I want to run Shimanami Kaido\n c.Well, I do not know.');
